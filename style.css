@@ -82,10 +82,11 @@ body {
     transition: all 0.3s;
 }
 
-/* HERO */
+/* ==================== HERO ==================== */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(27,67,50,0.75), rgba(27,67,50,0.85)), url('https://picsum.photos/1920/1080?nature') center/cover no-repeat;
+    background: linear-gradient(rgba(27,67,50,0.55), rgba(27,67,50,0.75)), 
+                url('attachments/image.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,6 +100,7 @@ body {
     font-size: clamp(3rem, 8vw, 5.5rem);
     margin-bottom: 1rem;
     animation: fadeUp 1s ease forwards;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
 }
 
 .hero-content .subtitle {
@@ -106,6 +108,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.95;
     animation: fadeUp 1s ease 0.3s forwards;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 .cta-button {
@@ -126,7 +129,7 @@ body {
     box-shadow: 0 15px 30px rgba(212, 160, 23, 0.4);
 }
 
-/* Seções Gerais */
+/* ==================== SEÇÕES GERAIS ==================== */
 .section {
     padding: 100px 0;
 }
@@ -157,15 +160,97 @@ body {
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     transition: transform 0.5s ease;
+    display: block;
+    margin: 0 auto 2rem;
 }
 
 .poster:hover {
     transform: scale(1.03);
 }
 
+/* Quem Somos */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.school-photo {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Objetivo */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 3.5rem;
+    color: var(--verde-medio);
+    font-weight: 700;
+}
+
+/* Footer */
+.footer {
+    background: var(--verde-escuro);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.logo-small {
+    height: 45px;
+}
+
+.socials {
+    margin: 2rem 0;
+}
+
+.socials a {
+    color: white;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: var(--verde-claro);
+}
+
+.copyright {
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-    .hamburger { display: flex; }
+    .hamburger { 
+        display: flex; 
+    }
+    
     .nav-links {
         position: fixed;
         top: 80px;
@@ -179,5 +264,17 @@ body {
         padding-top: 3rem;
         transition: left 0.4s ease;
     }
-    .nav-links.active { left: 0; }
+    
+    .nav-links.active { 
+        left: 0; 
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats {
+        gap: 2rem;
+    }
 }
